@@ -1,6 +1,6 @@
 // Identifiants valides
-const validUsername = "wiame.mohafidi";
-const validPassword = "MOHA_ahmed3";
+const validUsername = "w.moha";
+const validPassword = "MOHA_ahmed77";
 
 // Éléments du DOM
 const loginButton = document.getElementById("login-button");
