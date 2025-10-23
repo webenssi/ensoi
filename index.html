@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSIIE - Connexion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <img src="logo_ensiiie.png" alt="Logo ENSIIE" class="logo-login">
+        <h2>Connexion</h2>
+        <form id="login-form">
+            <label for="username">Identifiant :</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" id="login-button">Se connecter</button>
+        </form>
+        <p id="error-message" class="error-message" style="display: none;">Identifiant ou mot de passe incorrect.</p>
+    </div>
+
+    <div id="content" style="display: none;">
+        <header class="header">
+    <div class="logo">
+        <img src="logo_ensiiie.png" alt="Logo ENSIIE" class="logo-header">
+    </div>
+
+    <!-- Bouton menu hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+</header>
+
+        <aside class="sidebar">
+            <ul class="menu">
+                <li><a href="#" id="mon-compte-button">Mon compte</a></li>
+                <li>
+                    <a href="#" id="resultats-button">Résultats</a>
+                    <ul class="submenu">
+                        <li><a href="#notes-annee-en-cours">Notes aux épreuves année en cours</a></li>
+                        <li><a href="#notes-annees-precedentes">Notes aux épreuves années précédentes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="bulletins-button">Mes bulletins</a></li>
+                <li><a href="#" id="absence-button">Absences</a></li>
+                <li><a href="#" id="edt-button">Emploi du temps</a></li>
+                <li class="logout"><a href="#" id="logout-button">Déconnexion</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <!-- Section Mon Compte -->
+            <section id="mon-compte-section" style="display: none;">
+                <h2>Accueil ENSIIE</h2>
+                <p>Bienvenue sur votre espace étudiant.</p>
+            </section>
+
+            <!-- Section Notes -->
+            <section id="notes-annee-en-cours" style="display: none;">
+                <h2>Notes aux épreuves année en cours</h2>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher">
+                </div>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Code</th>
+                            <th>Libellé</th>
+                            <th>Note</th>
+                            <th>Motif d'absence</th>
+                            <th>Appréciation</th>
+                            <th>Intervenants</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_COSE11_EVALG_2425</td>
+                            <td>Evaluation module de Communication</td>
+                            <td>16.60</td>
+                            <td></td>
+                            <td></td>
+                            <td>BOURARD Laurence</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_LVID11_ESAV_2425</td>
+                            <td>Evaluation module de LV2 / FISE / Espagnol avancé / Semestre 1</td>
+                            <td>16.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>GOMEZ NOGALES Pablo, BOURARD Laurence</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_LVIU11_EVA11_2425</td>
+                            <td>Evaluation module d'Anglais / FISE / Groupe 1.1 / Semestre 1</td>
+                            <td>15.52</td>
+                            <td></td>
+                            <td></td>
+                            <td>BOURARD Laurence, OATES Janet</td>
+                        </tr>
+                        <tr>
+                            <td>01/06/2024</td>
+                            <td>FISE_COSE11_EVALG_2425</td>
+                            <td>Evaluation module de Communication</td>
+                            <td>18.30</td>
+                            <td></td>
+                            <td></td>
+                            <td>BOURARD Laurence</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_LVID11_ESAV_2425</td>
+                            <td>Evaluation module de LV2 / FISE / Espagnol avancé / Semestre 2</td>
+                            <td>18.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>GOMEZ NOGALES Pablo, BOURARD Laurence</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_LVIU11_EVA11_2425</td>
+                            <td>Evaluation module d'Anglais / FISE / Groupe 1.1 / Semestre 2</td>
+                            <td>14.32</td>
+                            <td></td>
+                            <td></td>
+                            <td>BOURARD Laurence, OATES Janet</td>
+                        </tr>
+                        <tr>
+                            <td>07/01/2025</td>
+                            <td>FISE_S1_ANNU11_ANNU11_SES1_EXAM01_2425</td>
+                            <td>ANNU 11 Examen</td>
+                            <td>14.50</td>
+                            <td></td>
+                            <td></td>
+                            <td>TORRI Vincent</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_S1_ECGE11_EEDD11_SES1_PROJ01_2425</td>
+                            <td>EEDD11 Projet</td>
+                            <td>16.50</td>
+                            <td></td>
+                            <td></td>
+                            <td>LIGOZAT Anne-laure</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_S1_COCO01_2425</td>
+                            <td> LV2 / FISE / Espagnol avancé Contrôle continu</td>
+                            <td>7.50</td>
+                            <td></td>
+                            <td></td>
+                            <td>BOURARD Laurence</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_S1_GROP11_GROP11_SES1_EXAM01_2425</td>
+                            <td>GROP11 Examen</td>
+                            <td>13.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>MERABET Massinissa</td>
+                        </tr>
+                        <tr>
+                            <td>06/01/2025</td>
+                            <td>FISE_S1_OSSE11_OSSE11_SES1_EXAM01_2425</td>
+                            <td>OSSE11 Examen</td>
+                            <td>14.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>MOUILLERON Christophe</td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2024</td>
+                            <td>FISE_S1_OSSE11_OSSE11_SES1_TPNO01_2425</td>
+                            <td>OSSE11 TP noté</td>
+                            <td>20.00</td>
+                            <td></td>
+                            <td>ex1: 6.4 / 7 | ex2: 3 / 3 | ex3: 4.62 / 5.5 | ex4: 5.5 / 8</td>
+                            <td>MOUILLERON Christophe</td>
+                        </tr>
+                        <tr>
+                            <td>06/01/2025</td>
+                            <td>FISE_S1_CBDR11_CBDR11_SES1</td>
+                            <td> Base de données EXAM</td>
+                            <td>16.30</td>
+                            <td></td>
+                            <td></td>
+                            <td>SZAFRANSKI Marie</td>
+                        </tr>
+                        <tr>
+                            <td>06/01/2025</td>
+                            <td>FISE_S1_PROB</td>
+                            <td> Probabilité EXAM</td>
+                            <td>17.50</td>
+                            <td></td>
+                            <td></td>
+                            <td>LY VATH Vathana</td>
+                        </tr>
+                          <tr>
+                            <td>06/01/2025</td>
+                            <td>FISE_S1_LI</td>
+                            <td> LICENCE EXAM</td>
+                            <td>16.30</td>
+                            <td></td>
+                            <td></td>
+                            <td>BENEZET Laure</td>
+                        </tr>
+                        <tr> 
+                            <td>10/06/2025</td>
+                            <td>FISE_S2_MAEC12</td>
+                            <td> MAEC Examen</td>
+                            <td>15.50</td>
+                            <td></td>
+                            <td></td>
+                            <td>DEUJEUFOSSE Damien</td>
+                        </tr>
+                         <tr>
+                            <td>11/06/2025</td>
+                            <td>FISE_S2_IPFL</td>
+                            <td> IPFL Examen</td>
+                            <td>16.40</td>
+                            <td></td>
+                            <td></td>
+                            <td>FOREST Julien</td>
+                        </tr>
+                         <tr>
+                            <td>11/06/2025</td>
+                            <td>FISE_S2_IPFL</td>
+                            <td> IPFL Projet</td>
+                            <td>18.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>FOREST Julien</td>
+                        </tr>
+                        <tr>
+                            <td>11/06/2025</td>
+                            <td>FISE_S2_LOGI12</td>
+                            <td> LOGI12 Projet</td>
+                            <td>15.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>FOREST Julien</td>
+                        </tr>
+                         <tr>
+                            <td>12/06/2025</td>
+                            <td>FISE_S2_LAOB12</td>
+                            <td> LAOB12 Projet</td>
+                            <td>19.47</td>
+                            <td></td>
+                            <td></td>
+                            <td>ROUSSEL David</td>
+                        </tr>
+                        <tr>
+                            <td>12/06/2025</td>
+                            <td>FISE_S2_LAOB12</td>
+                            <td> LAOB12 TP noté</td>
+                            <td>18.26</td>
+                            <td></td>
+                            <td></td>
+                            <td>ROUSSEL David </td>
+                        </tr>
+                          <tr>
+                            <td>13/06/2025</td>
+                            <td>FISE_S2_OPMA12</td>
+                            <td> OPMA12 Moyenne globale</td>
+                            <td> 17.00</td>
+                            <td></td>
+                            <td></td>
+                            <td>MOEINI Mahdi</td>
+                        </tr>
+                        <tr>
+                            <td>10/06/2025</td>
+                            <td>FISE_S2_REDO12</td>
+                            <td> REDO12 Examen</td>
+                            <td> 15.30</td>
+                            <td></td>
+                            <td></td>
+                            <td>BANNOUR Fetia</td>
+                        </tr>
+                        <tr>
+                            <td>11/06/2025</td>
+                            <td>FISE_S2_STAT12</td>
+                            <td> STAT12 Examen</td>
+                            <td> 18.20</td>
+                            <td></td>
+                            <td></td>
+                            <td> BRUNEL Nicolas</td>
+                        </tr>
+                         <tr>
+                            <td>11/06/2025</td>
+                            <td>FISE_S2_Licence</td>
+                            <td> LICENCE EXAM</td>
+                            <td> 15.87</td>
+                            <td></td>
+                            <td></td>
+                            <td> BENEZET Laure</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section Absences -->
+            <section id="absence-section" style="display: none;">
+                <h2>Absences</h2>
+                <p><strong>Nombre total d'absences:</strong> 0</p>
+                <p><strong>Durée totale des absences:</strong> 0:0</p>
+            </section>
+            <section id="edt-section" style="display: none;">
+    <h2>Emploi du temps</h2>
+    <div class="edt-container">
+        <!-- Ici on pourra afficher ton EDT -->
+        <iframe src="edt.html" class="edt-frame"></iframe>
+    </div>
+</section>
+            <!-- Section Bulletins -->
+<section id="bulletins-section" style="display: none;">
+    <h2>Mes bulletins</h2>
+    <p>Téléchargez vos bulletins :</p>
+    <div class="bulletins-container">
+    <a href="bulletin_semestre1.pdf" download class="bulletin-link">📄 BULLETIN SEMESTRE 1</a>
+    <a href="bulletin_semestre2.pdf" download class="bulletin-link">📄 BULLETIN SEMESTRE 2</a>
+</div>
+</section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
