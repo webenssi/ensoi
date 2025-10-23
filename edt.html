@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Emploi du temps - ensIIE (modifié)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #f5821f;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+    table {
+      width: 95%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      min-width: 120px;
+    }
+    th {
+      background: #f5821f;
+      color: white;
+      font-size: 14px;
+    }
+    .course {
+      background: #4caf50;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>ensIIE - Emploi du temps personnalisé</header>
+
+  <table>
+    <tr>
+      <th>Heure</th>
+      <th>Lundi</th>
+      <th>Mardi</th>
+      <th>Mercredi</th>
+      <th>Jeudi</th>
+      <th>Vendredi</th>
+    </tr>
+
+    <!-- 9h-11h -->
+    <tr>
+      <td>09h–11h</td>
+      <td class="course">Méthodes de régression régularisée<br><small>MOUGEOT - Amphi 102</small></td>
+      <td></td>
+      <td class="course">Recherche opérationnelle<br><small>WATEL - Amphi Ivan AUGÉ</small></td>
+      <td></td>
+      <td class="course">Programmation avancée et projet<br><small>TORRI - Amphi Ivan AUGÉ</small></td>
+    </tr>
+
+    <!-- 11h-13h -->
+    <tr>
+      <td>11h–13h</td>
+      <td class="course">Méthodes de régression régularisée<br><small>MOUGEOT - Amphi 102</small></td>
+      <td></td>
+      <td class="course">Recherche opérationnelle (TD)<br><small>WATEL - Amphi Ivan AUGÉ</small></td>
+      <td class="course">Analyse de données<br><small>ATIQ - Amphi Ivan AUGÉ</small></td>
+      <td class="course">Droit civil et informatique<br><small>PILLIAS-PERRON - Amphi 102</small></td>
+    </tr>
+
+    <!-- 13h-14h pause -->
+    <tr>
+      <td>13h–14h</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- 14h-16h -->
+    <tr>
+      <td>14h–16h</td>
+      <td class="course">Analyse de données (TP)<br><small>ATIQ - S. 227</small></td>
+      <td class="course">LV1 Anglais<br><small>BAYLY - S.122</small></td>
+      <td></td> <!-- supprimé le cours du mercredi -->
+      <td class="course">Processus stochastiques<br><small>SAGNA - Amphi Ivan AUGÉ</small></td>
+      <td></td>
+    </tr>
+
+    <!-- 16h-18h -->
+    <tr>
+      <td>16h–18h</td>
+      <td class="course">Challenge entreprendre<br><small>Sciences de l’ingénieur 3</small></td>
+      <td class="course">Processus stochastiques (TD)<br><small>SAGNA - Amphi Ivan AUGÉ</small></td>
+      <td></td>
+      <td></td> <!-- supprimé le cours du jeudi -->
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>
+
